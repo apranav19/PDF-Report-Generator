@@ -41,14 +41,23 @@ public class Application extends Controller {
 		render();
 	}
 
+	/**
+	 * @throws DocumentException
+	 * @throws Exception
+	 * @throws IOException
+	 */
 	public static void generateTemplate() throws DocumentException, Exception,
 			IOException {
-		Person person = new Person("Pranav", "Angara", 21, "Occupation",
-				Play.getFile("/public/images/result-chart.png"));
+		Person person = new Person("Pranav", "Angara", 21, "Occupation", Play.getFile("/public/images/result-chart.png"));
 		CustomReport myReport = new CustomReport(person);
 		renderBinary(myReport.createFile());
 	}
 
+	/**
+	 * A callback method that receives the SVG element from the main page and converts it into a PNG image
+	 * @throws DocumentException
+	 * @throws Exception
+	 */
 	public static void convertSVGToPNG() throws DocumentException, Exception {
 		File base_file = Play.getFile("/public/images/result-chart.png");
 		String svg_element = params.all().get("svg")[0];
