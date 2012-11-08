@@ -1,0 +1,10 @@
+# Application dependencies
+
+require:
+    - play
+    - com.itextpdf -> itextpdf 5.1.3
+    - org.apache.xmlgraphics -> batik-ttf2svg 1.7
+    - org.apache.xmlgraphics -> batik-svgpp 1.7
+    - org.apache.xmlgraphics -> batik-squiggle 1.7
+    - org.apache.xmlgraphics -> batik-rasterizer 1.7
+    - org.apache.xmlgraphics -> batik-codec 1.7
